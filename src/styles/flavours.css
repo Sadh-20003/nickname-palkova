@@ -1,0 +1,174 @@
+.flavours-section {
+    position: relative;
+    padding: 150px 20px;
+    background: linear-gradient(180deg, #fffaf2, #fff1db);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* spotlight glow */
+
+.flavours-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    right: -120px;
+
+    width: 420px;
+    height: 420px;
+
+    background: radial-gradient(circle, #ffe0b0, #ffd39a, transparent 70%);
+
+    filter: blur(40px);
+
+    opacity: 0.7;
+
+}
+
+.flavours-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -120px;
+    left: -120px;
+
+    width: 420px;
+    height: 420px;
+
+    background: radial-gradient(circle, #ffe8c7, #ffd39a, transparent 70%);
+
+    filter: blur(40px);
+
+    opacity: 0.6;
+
+}
+
+/* title */
+
+.flavours-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #4b2e1e;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* grid */
+
+.flavours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* card */
+
+.flavour-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 26px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+    transition: 0.45s;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* curved glow border */
+
+.flavour-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -40%;
+    left: -40%;
+
+    width: 180%;
+    height: 180%;
+
+    background: radial-gradient(circle,
+            rgba(255, 230, 190, 0.7),
+            transparent 60%);
+
+    opacity: 0;
+
+    transition: 0.5s;
+
+}
+
+/* image */
+
+.flavour-card img {
+
+    width: 100%;
+
+    border-radius: 14px;
+
+    margin-bottom: 18px;
+
+    transition: 0.4s;
+
+}
+
+/* hover animation */
+
+.flavour-card:hover {
+
+    transform: translateY(-14px) scale(1.04);
+
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+
+}
+
+.flavour-card:hover::before {
+
+    opacity: 1;
+
+}
+
+.flavour-card:hover img {
+
+    transform: scale(1.1);
+
+}
+
+/* text */
+
+.flavour-card h3 {
+
+    font-size: 20px;
+
+    color: #3b2414;
+
+    margin-bottom: 10px;
+
+}
+
+.flavour-card p {
+
+    font-size: 14px;
+
+    color: #6d5b4a;
+
+}
